@@ -4,7 +4,7 @@ function start(bot, message) {
     const options = {
         parse_mode: 'Markdown',
         reply_markup: {
-            keyboard: [{ text: 'Send my phone number', request_contact: true }],
+            keyboard: [[{ text: 'Send my phone number', request_contact: true }]],
             resize_keyboard: false,
             one_time_keyboard: false
         }
