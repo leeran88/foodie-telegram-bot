@@ -1,6 +1,7 @@
+var Bot = require('node-telegram-bot-api');
+var start = require('./handle-start');
 var token = process.env.TELEGRAM_TOKEN;
 
-var Bot = require('node-telegram-bot-api');
 var bot;
 
 if(process.env.NODE_ENV === 'production') {
@@ -14,10 +15,10 @@ else {
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 bot.onText(/^/, function (msg) {
-  var name = msg.from.first_name;
-  bot.sendMessage(msg.chat.id, 'Hello, ' + name + '!').then(function () {
-    // reply sent!
-  });
+  const message = req.body.message;
+  if (message.text === '/start') {
+      start(bot, message);
+  }
 });
 
 module.exports = bot;
