@@ -14,8 +14,7 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-bot.onText(/^/, function (msg) {
-  const message = req.body.message;
+bot.onText(/^/, function (message) {
   if (message.text === '/start') {
       start(bot, message);
   }
