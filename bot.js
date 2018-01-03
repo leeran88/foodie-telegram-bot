@@ -17,13 +17,17 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 bot.onText(/^/, function (message) {
   if (message.text === '/start') {
+      console.log('Handling start message.');
       start(bot, message);
       return;
   }
   if (typeof (message.contact) !== 'undefined') {
+      console.log('Handling contact message.');
       register(bot, message);
       return;
   }
+
+  console.log('Unknown message, not handled.');
 });
 
 module.exports = bot;
