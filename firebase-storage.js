@@ -4,10 +4,11 @@ function registerUser(user) {
     firebase.database().ref('/users/' + user.id).set(user);
 }
 
-// function order(order) {
-    // firebase.database().ref('/orders').set(order);
-// }
+function addOrder(order) {
+    firebase.database().ref('/orders').push(order);
+}
 
 module.exports = {
-    registerUser   
+    registerUser,
+    addOrder
 }
