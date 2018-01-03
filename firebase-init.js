@@ -1,4 +1,4 @@
-const firebaseInit = require('firebase');
+const firebase = require('firebase');
 
 function firebaseInit() {
     const firebaseConfig = {
