@@ -22,16 +22,20 @@ bot.onText(/^/, (message) => {
       start(bot, message);
       return;
   }
+
   if (message.text === 'I\'m hungry') {
       console.log('Handling order message.');
       order(bot, message);
       return;
   }
+
+  console.log('Handling register message.');
+  register(bot, message);
 });
 
 bot.on('message', (message) => {
   if (typeof (message.contact) !== 'undefined') {
-    console.log('Handling contact message.');
+    console.log('Handling register message.');
     register(bot, message);
     return;
   }
