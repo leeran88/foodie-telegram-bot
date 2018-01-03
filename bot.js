@@ -1,5 +1,6 @@
 var Bot = require('node-telegram-bot-api');
 var start = require('./handle-start');
+var register = require('./handle-register');
 var token = process.env.TELEGRAM_TOKEN;
 
 var bot;
@@ -17,6 +18,11 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 bot.onText(/^/, function (message) {
   if (message.text === '/start') {
       start(bot, message);
+      return;
+  }
+  if (typeof (message.contact) !== 'undefined') {
+      register(bot, message);
+      return;
   }
 });
 
