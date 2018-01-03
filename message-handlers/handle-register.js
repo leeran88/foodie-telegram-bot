@@ -1,4 +1,4 @@
-const storage = require('./firebase-storage');
+const storage = require('../storage/firebase-storage');
 
 function register(bot, message) {
     registerUser(message);

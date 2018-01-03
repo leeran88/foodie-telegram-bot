@@ -1,4 +1,4 @@
-const storage = require('./firebase-storage');
+const storage = require('../storage/firebase-storage');
 
 function start(bot, message) {
     addOrder(message);

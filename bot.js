@@ -1,7 +1,7 @@
 var Bot = require('node-telegram-bot-api');
-var start = require('./handle-start');
-var register = require('./handle-register');
-var order = require('./handle-order');
+var start = require('./message-handlers/handle-start');
+var register = require('./message-handlers/handle-register');
+var order = require('./message-handlers/handle-order');
 var token = process.env.TELEGRAM_TOKEN;
 
 var bot;

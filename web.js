@@ -1,7 +1,7 @@
 var express = require('express');
 var packageInfo = require('./package.json');
 var bodyParser = require('body-parser');
-var sendNotification = require('./send-notification');
+var sendNotification = require('./message-handlers/send-notification');
 
 var app = express();
 app.use(bodyParser.json());
