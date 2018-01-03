@@ -13,21 +13,19 @@ else {
   bot = new Bot(token, { polling: true });
 }
 
-console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
+console.log('Bot server started in ' + process.env.NODE_ENV + ' mode');
 
-bot.onText(/^/, function (message) {
-  if (message.text === '/start') {
-      console.log('Handling start message.');
-      start(bot, message);
-      return;
-  }
+bot.onText('/start', (message) => {
+  console.log('Handling start message.');
+  start(bot, message);
+});
+
+bot.on('message', (message) => {
   if (typeof (message.contact) !== 'undefined') {
-      console.log('Handling contact message.');
-      register(bot, message);
-      return;
+    console.log('Handling contact message.');
+    register(bot, message);
+    return;
   }
-
-  console.log('Unknown message, not handled.');
 });
 
 module.exports = bot;
