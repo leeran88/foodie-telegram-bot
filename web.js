@@ -29,7 +29,7 @@ module.exports = function (bot) {
     console.log('Notification recieved from web app.');
     console.log(JSON.stringify(req.query));
 
-    sendNotification(bot, req.query.userId);
+    sendNotification(bot, req.query.userId, req.query.foor);
     res.sendStatus(200);
   });
 };

@@ -1,8 +1,8 @@
 const sendGenericMessage = require('../message-handlers/send-generic-message');
 
-function sendNotification(bot, chatId) {
+function sendNotification(bot, chatId, floor) {
     const joke = getRandomJoke();
-    const message = joke + '\n\n' + 'Your food is here! :raised_hands: Bon appetit! :fork_and_knife:';
+    const message = joke + '\n\n' + 'Your food is on floor ' + floor + '! :raised_hands: Bon appetit! :fork_and_knife:';
 
     sendGenericMessage(bot, chatId, message);
 }
