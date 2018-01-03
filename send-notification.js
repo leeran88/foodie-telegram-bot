@@ -10,9 +10,7 @@ function sendNotification(bot, userId) {
         }
     };
 
-    bot.sendMessage(chatId, text, options).then(function () {
-
-    });
+    bot.sendMessage(chatId, text, options);
 }
 
 module.exports = sendNotification;

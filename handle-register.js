@@ -14,9 +14,7 @@ function register(bot, message) {
         }
     };
 
-    bot.sendMessage(chatId, text, options).then(function () {
-
-    });
+    bot.sendMessage(chatId, text, options);
 }
 
 function registerUser(message) {

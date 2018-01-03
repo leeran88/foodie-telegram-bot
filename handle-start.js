@@ -10,9 +10,7 @@ function start(bot, message) {
         }
     };
 
-    bot.sendMessage(chatId, text, options).then(function () {
-
-    });
+    bot.sendMessage(chatId, text, options);
 }
 
 module.exports = start;
