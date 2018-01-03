@@ -23,7 +23,7 @@ bot.onText(/^/, (message) => {
       return;
   }
 
-  if (message.text === 'I\'m hungry') {
+  if (message.text === 'I ordered food') {
       console.log('Handling order message.');
       order(bot, message);
       return;
