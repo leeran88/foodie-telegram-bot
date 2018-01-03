@@ -23,7 +23,6 @@ function registerUser(message) {
     const user = {
         id: message.from.id,
         phone: message.contact.phone_number,
-        chatId: message.chat.id
     }
     storage.registerUser(user);
 }
