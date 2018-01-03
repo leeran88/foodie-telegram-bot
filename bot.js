@@ -1,10 +1,10 @@
-var Bot = require('node-telegram-bot-api');
-var start = require('./message-handlers/handle-start');
-var register = require('./message-handlers/handle-register');
-var order = require('./message-handlers/handle-order');
-var token = process.env.TELEGRAM_TOKEN;
+const Bot = require('node-telegram-bot-api');
+const start = require('./message-handlers/handle-start');
+const register = require('./message-handlers/handle-register');
+const order = require('./message-handlers/handle-order');
+const token = process.env.TELEGRAM_TOKEN;
 
-var bot;
+let bot;
 
 if(process.env.NODE_ENV === 'production') {
   bot = new Bot(token);

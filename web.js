@@ -1,18 +1,18 @@
-var express = require('express');
-var packageInfo = require('./package.json');
-var bodyParser = require('body-parser');
-var sendNotification = require('./message-handlers/send-notification');
+const express = require('express');
+const packageInfo = require('./package.json');
+const bodyParser = require('body-parser');
+const sendNotification = require('./message-handlers/send-notification');
 
-var app = express();
+const app = express();
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
   res.json({ version: packageInfo.version });
 });
 
-var server = app.listen(process.env.PORT, "0.0.0.0", function () {
-  var host = server.address().address;
-  var port = server.address().port;
+const server = app.listen(process.env.PORT, "0.0.0.0", function () {
+  const host = server.address().address;
+  const port = server.address().port;
   console.log('Web server started at http://%s:%s', host, port);
 });
 
