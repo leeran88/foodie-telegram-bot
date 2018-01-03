@@ -12,9 +12,9 @@ function start(bot, message) {
 function addOrder(message) {
     const order = {
         userId: message.from.id,
-        orderTime: new Date(),
+        orderTime: new Date().toJSON(),
         notified: false,
-        expiration: getExpiration()
+        expiration: getExpiration().toJSON()
     }
 
     storage.addOrder(order);
