@@ -2,7 +2,7 @@ const sendGenericMessage = require('../message-handlers/send-generic-message');
 
 function sendNotification(bot, chatId, floor) {
     const joke = getRandomJoke();
-    const message = joke + '\n\n' + 'Your food is on floor '/* + floor*/ + '! :raised_hands: Bon appetit! 🍴';
+    const message = joke + '\n\n' + 'Your food is on floor '/* + floor*/ + '! 🙌🏼 Bon appetit! 🍴';
 
     sendGenericMessage(bot, chatId, message);
 }
