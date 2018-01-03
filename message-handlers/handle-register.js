@@ -2,19 +2,17 @@ const storage = require('../storage/firebase-storage');
 
 function register(bot, message) {
     registerUser(message);
-
-    const chatId = message.chat.id;
-    const text = 'All set! Sign up for notifications by sending "/NotifyMe"';
+    
     const options = {
         parse_mode: 'Markdown',
         reply_markup: {
             keyboard: [[{ text: '/NotifyMe' }]],
             resize_keyboard: false,
-            one_time_keyboard: true
+            one_time_keyboard: false
         }
     };
 
-    bot.sendMessage(chatId, text, options);
+    bot.sendMessage(message.chat.id, 'All set! Sign up for notifications by sending "/NotifyMe"', options);
 }
 
 function registerUser(message) {

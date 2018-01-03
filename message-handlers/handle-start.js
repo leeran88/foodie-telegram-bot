@@ -1,16 +1,7 @@
-function start(bot, message) {
-    const chatId = message.chat.id;
-    const text = 'Hi, I\'m Foodie! I can let you know when your food is here! To do so we need be in touch, can you please send me your phone?';
-    const options = {
-        parse_mode: 'Markdown',
-        reply_markup: {
-            keyboard: [[{ text: 'Send my phone number', request_contact: true }]],
-            resize_keyboard: false,
-            one_time_keyboard: false
-        }
-    };
+const sendGenericMessage = require('../message-handlers/send-generic-message');
 
-    bot.sendMessage(chatId, text, options);
+function start(bot, message) {
+    sendGenericMessage(bot, message.chat.id, 'Hi, I\'m Foodie! I can let you know when your food is here! To do so we need be in touch, can you please send me your phone?');
 }
 
 module.exports = start;

@@ -1,12 +1,9 @@
 const storage = require('../storage/firebase-storage');
+const sendGenericMessage = require('../message-handlers/send-generic-message');
 
 function start(bot, message) {
     addOrder(message);
-
-    const chatId = message.chat.id;
-    const text = 'Roger that. I\'ll let you know when your food is here.';
-
-    bot.sendMessage(chatId, text);
+    sendGenericMessage(bot, message.chat.id, 'Roger that. I\'ll let you know when your food is here.');
 }
 
 function addOrder(message) {
