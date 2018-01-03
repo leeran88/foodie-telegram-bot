@@ -6,7 +6,7 @@ function register(bot, message) {
         reply_markup: {
             keyboard: [[{ text: 'I\'m hungry' }]],
             resize_keyboard: false,
-            one_time_keyboard: false
+            one_time_keyboard: true
         }
     };
 
