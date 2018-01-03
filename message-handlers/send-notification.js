@@ -15,8 +15,8 @@ function getRandomJoke() {
         'Q:  Why did the tomato turn red?' + '\n' + 'A:  Because it saw the salad dressing.',
     ];
 
-    jokeIndex = Math.floor(Math.random() * jokes.length) + 1;
-    
+    const jokeIndex = Math.floor(Math.random() * jokes.length);
+
     return jokes[jokeIndex];
 }
 
