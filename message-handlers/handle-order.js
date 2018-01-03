@@ -3,7 +3,7 @@ const sendGenericMessage = require('../message-handlers/send-generic-message');
 
 function start(bot, message) {
     addOrder(message);
-    sendGenericMessage(bot, message.chat.id, 'Roger that. I\'ll let you know when your food is here.');
+    sendGenericMessage(bot, message.chat.id, 'Roger that.' + '\n' + 'I\'ll let you know when your food is here.');
 }
 
 function addOrder(message) {
