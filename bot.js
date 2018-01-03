@@ -1,6 +1,7 @@
 var Bot = require('node-telegram-bot-api');
 var start = require('./handle-start');
 var register = require('./handle-register');
+var order = require('./handle-order');
 var token = process.env.TELEGRAM_TOKEN;
 
 var bot;
@@ -19,6 +20,11 @@ bot.onText(/^/, (message) => {
   if (message.text === '/start') {
       console.log('Handling start message.');
       start(bot, message);
+      return;
+  }
+  if (message.text === 'I\'m hungry') {
+      console.log('Handling order message.');
+      order(bot, message);
       return;
   }
 });
