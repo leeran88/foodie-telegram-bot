@@ -12,9 +12,20 @@ function start(bot, message) {
 function addOrder(message) {
     const order = {
         userId: message.from.id,
+        orderTime: new Date(),
+        notified: false,
+        expiration: getExpiration()
     }
 
     storage.addOrder(order);
+}
+
+function getExpiration() {
+    const expirationInHours = 3;
+    const expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + expirationInHours*60*60*1000);
+
+    return expirationDate;
 }
 
 module.exports = start;
