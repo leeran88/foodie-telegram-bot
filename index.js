@@ -1,3 +1,3 @@
 const bot = require('./bot');
-require('./firebase-init')();
+require('./storage/firebase-init')();
 require('./web')(bot);
