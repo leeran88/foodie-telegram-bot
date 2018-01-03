@@ -27,9 +27,10 @@ module.exports = function (bot) {
 
   app.post('/notify', function (req, res) {
     console.log('Notification recieved from web app.');
-    console.log(JSON.stringify(req.body));
+    console.log(JSON.stringify(req));
+    console.log(JSON.stringify(req.query));
 
-    sendNotification(bot, req.body.userId);
+    sendNotification(bot, req.query.userId);
     res.sendStatus(200);
   });
 };
