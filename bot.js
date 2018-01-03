@@ -29,8 +29,8 @@ bot.onText(/^/, (message) => {
       return;
   }
 
-  console.log('Handling register message.');
-  register(bot, message);
+  console.log('Unknown message recieved.');
+  bot.sendMessage(message.chat.id, 'Say waaaat?');
 });
 
 bot.on('message', (message) => {
