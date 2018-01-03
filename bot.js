@@ -23,7 +23,7 @@ bot.onText(/^/, (message) => {
       return;
   }
 
-  if (message.text === 'I ordered food') {
+  if (message.text === '/NotifyMe') {
       console.log('Handling order message.');
       order(bot, message);
       return;

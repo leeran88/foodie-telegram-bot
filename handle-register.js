@@ -4,11 +4,11 @@ function register(bot, message) {
     registerUser(message);
 
     const chatId = message.chat.id;
-    const text = 'All set! Sign up for notifications by sending "I\'m hungry"';
+    const text = 'All set! Sign up for notifications by sending "/NotifyMe"';
     const options = {
         parse_mode: 'Markdown',
         reply_markup: {
-            keyboard: [[{ text: 'I\'m hungry' }]],
+            keyboard: [[{ text: '/NotifyMe' }]],
             resize_keyboard: false,
             one_time_keyboard: true
         }
