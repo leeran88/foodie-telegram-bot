@@ -15,9 +15,12 @@ else {
 
 console.log('Bot server started in ' + process.env.NODE_ENV + ' mode');
 
-bot.onText('/start', (message) => {
-  console.log('Handling start message.');
-  start(bot, message);
+bot.onText(/^/, (message) => {
+  if (message.text === '/start') {
+      console.log('Handling start message.');
+      start(bot, message);
+      return;
+  }
 });
 
 bot.on('message', (message) => {
