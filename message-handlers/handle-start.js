@@ -1,6 +1,6 @@
 function start(bot, message) {
     const chatId = message.chat.id;
-    const text = 'Hi, I\'m Foodie!' + '\n' + 'I can let you know when your food is here!' + '\n' + 'To do so we need be in touch, please click "Send my phone number" below';
+    const text = 'Hi, I\'m Foodie!' + '\n' + 'I can let you know when your food is here!' + '\n' + 'To do so, we need be in touch.' + '\n' + 'Please click "Send my phone number" below';
     const options = {
         parse_mode: 'Markdown',
         reply_markup: {

@@ -12,7 +12,7 @@ function register(bot, message) {
         }
     };
 
-    bot.sendMessage(message.chat.id, 'All Righty!' + '\n' + 'Each time you order food, click /NotifyMe to use Foodie.', options);
+    bot.sendMessage(message.chat.id, 'Alrighty!' + '\n' + 'Now each time you order food, click /NotifyMe to use Foodie.', options);
 }
 
 function registerUser(message) {
