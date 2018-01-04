@@ -1,6 +1,6 @@
 const storage = require('../storage/firebase-storage');
-const getJoke = require('../message-handlers/joke-box');
-const sendGenericMessage = require('../message-handlers/send-generic-message');
+const getJoke = require('./joke-box');
+const sendGenericMessage = require('./send-generic-message');
 
 function start(bot, message) {
     addOrder(message);

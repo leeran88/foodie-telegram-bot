@@ -1,4 +1,4 @@
-const sendGenericMessage = require('../message-handlers/send-generic-message');
+const sendGenericMessage = require('./send-generic-message');
 
 function sendNotification(bot, chatId, floor) {
     const message = 'Your food has arrived on #' + floor + ' floor! 🙌🏼🍴';
