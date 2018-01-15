@@ -9,7 +9,8 @@ function addOrderByMail(searsId) {
         searsId: searsId,
         orderTime: new Date().toJSON(),
         notified: false,
-        expiration: getExpiration().toJSON()
+        expiration: getExpiration().toJSON(),
+        method: "email"
     };
 
     storage.addOrder(order);

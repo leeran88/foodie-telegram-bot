@@ -13,7 +13,8 @@ function addOrder(message) {
         userId: message.from.id,
         orderTime: new Date().toJSON(),
         notified: false,
-        expiration: getExpiration().toJSON()
+        expiration: getExpiration().toJSON(),
+        method: "chatBot",
     }
 
     storage.addOrder(order);
